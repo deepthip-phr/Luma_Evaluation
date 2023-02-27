@@ -35,10 +35,9 @@ public class PLPPages {
     WebElement cartMessage;
 
     public String checkingTheCart() throws InterruptedException {
-        seleniumWaits.givingImplicitWait();
+        Thread.sleep(5000);
         selenumActions.waitAndClickOnElement(cartButton);
         String textInCart = cartMessage.getText();
-        seleniumWaits.killingImplicitWait();
         return textInCart;
 
     }

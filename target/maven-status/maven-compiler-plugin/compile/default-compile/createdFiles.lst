@@ -1,0 +1,11 @@
+com\motivitylabs\Constants\WiatTime.class
+com\motivitylabs\Pages\WishListPage.class
+com\motivitylabs\Actions\SelenumActions.class
+com\motivitylabs\Waits\SeleniumWaits.class
+com\motivitylabs\Pages\HomePage.class
+com\motivitylabs\Pages\WelcomePage.class
+com\motivitylabs\DataManager\ReadingDatafromJson.class
+com\motivitylabs\Automation\LumaBasePage.class
+com\motivitylabs\Pages\PLPPages.class
+com\motivitylabs\Pages\SignInPage.class
+com\motivitylabs\Pages\CheckoutPage.class

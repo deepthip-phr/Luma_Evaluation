@@ -55,14 +55,12 @@ public class PLPPages {
         String addZero = "0";
         String symbol = "$";
         price = symbol.concat(priceinString).concat(addZero);
-        System.out.println("Product with Highest Price " + price);
         return price;
 
     }
 
     public String gettingName() {
         TitleOfProduct = driver.findElement(By.xpath("//span[text()='" + price + "']/ancestor::div[@class='product-item-info']//strong")).getText();
-        System.out.println(TitleOfProduct);
         selenumActions.clickElementUsingMouseHover(driver.findElement(By.xpath("//span[text()='$74.00']/ancestor::div[@class='product-item-info']")), driver.findElement(By.xpath("//span[text()='" + price + "']/ancestor::div[@class='product-item-info']//strong/following-sibling::div[@class='product-item-inner']//span[text()='Add to Wish List']/parent::a")));
         return TitleOfProduct;
 

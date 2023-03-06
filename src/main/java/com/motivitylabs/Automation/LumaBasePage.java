@@ -8,7 +8,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -22,6 +21,9 @@ public class LumaBasePage {
     ChromeOptions chromeOptions;
     EdgeOptions edgeOptions;
 
+    /**
+     * Launching Browser Normal Test
+     */
     @BeforeSuite
     public void launchBrowser() {
         WebDriverManager.edgedriver().setup();
@@ -33,6 +35,9 @@ public class LumaBasePage {
         driver.get("https://magento.softwaretestingboard.com/");
         driver.manage().window().maximize();
     }
+    /**
+     * LaunchingBrowser and Application for Selenium Grid / Lambda Test
+     */
 
     //@Parameters({"browser"})
 //@BeforeTest
@@ -63,7 +68,9 @@ public class LumaBasePage {
         driver.get("https://magento.softwaretestingboard.com/");
         driver.manage().window().maximize();
     }
-
+    /**
+     * Quiting the Browser
+     */
 
     @AfterSuite
     public void killSession() {

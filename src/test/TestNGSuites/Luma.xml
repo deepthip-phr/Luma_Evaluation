@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <parameter name="browserName" value="edge"></parameter>
+
     <test verbose="2" preserve-order="true" name="C:\Users\Deepthi\LumaEvaluation\src\test\TestNGSuites\Luma.xml">
         <classes>
             <class name="LumaTest">

@@ -58,20 +58,22 @@ public class CheckoutPage {
 
 
             selenumActions.waitAndClickOnElement(checkBox);
-            streetName.sendKeys(street);
-            cityName.sendKeys(city);
-            stateDropdown.click();
-            Select select = new Select(stateDropdown);
-            select.selectByVisibleText(state);
-            stateDropdown.click();
-            pincodeInputBox.sendKeys(zipcode);
-            telephone.sendKeys(mobile);
-            nextButton.click();
+            selenumActions.enterValue(streetName,street);
+            selenumActions.enterValue(cityName,city);
+            selenumActions.clickOnElement(stateDropdown);
+            //Select select = new Select(stateDropdown);
+           // select.selectByVisibleText(state);
+
+            selenumActions.selectValueFromDropDown(stateDropdown,state,"text");
+
+            selenumActions.clickOnElement(stateDropdown);
+            selenumActions.enterValue(pincodeInputBox,zipcode);
+            selenumActions.enterValue(telephone,mobile);
+            selenumActions.clickOnElement(nextButton);
 
         } catch (Exception e) {
             e.printStackTrace();
-            //selenumActions.waitAndClickOnElement(checkBox);
-            nextButton.click();
+            selenumActions.clickOnElement(nextButton);
 
         }
     }

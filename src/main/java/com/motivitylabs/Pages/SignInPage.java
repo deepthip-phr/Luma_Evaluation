@@ -1,5 +1,6 @@
 package com.motivitylabs.Pages;
 
+import com.motivitylabs.Actions.SelenumActions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,10 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage {
     WebDriver driver;
+    SelenumActions selenumActions;
 
     public SignInPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        selenumActions = new SelenumActions(driver);
     }
 
     @FindBy(id = "email")
@@ -21,9 +24,9 @@ public class SignInPage {
     WebElement signInButton;
 
     public void signIn(String email, String password) {
-        emailInputBox.sendKeys(email);
-        passwordInputBox.sendKeys(password);
-        signInButton.click();
+        selenumActions.enterValue(emailInputBox,email);
+        selenumActions.enterValue(passwordInputBox,password);
+        selenumActions.clickOnElement(signInButton);
     }
 
 }

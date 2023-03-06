@@ -23,7 +23,7 @@ public class HomePage {
     @FindBy(xpath = "//div[starts-with(@class,'panel')]//a[normalize-space()='Sign In']")
     WebElement signInLink;
 
-    public void clickOnSignIn() throws InterruptedException {
+    public void clickOnSignIn() {
         selenumActions.waitAndClickOnElement(signInLink);
     }
 }
